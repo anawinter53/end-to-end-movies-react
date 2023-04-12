@@ -4,6 +4,7 @@ import { HomePage, NotFoundPage, SearchPage, ShowPage, ShowsPage } from './pages
 import { Header } from './layouts'
 import { Routes, Route } from 'react-router-dom'
 
+
 function App() {
 
   return (

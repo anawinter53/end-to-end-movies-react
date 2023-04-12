@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { ShowCard } from '../'
+import { manageInput, manageSubmit } from '../../action-creators/action-creators';
 
 export default function SearchWidget() {
     const [inputValue, setInputValue] = useState('');
     const [searchString, setSearchString] = useState('Married at first sight')
     const [shows, setShows] = useState([])
-
+ 
     function handleInput(e) {
         const newInput = e.target.value;
-        setInputValue(newInput)
+        manageInput(newInput)
     }
 
     function handleSubmit(e) {
         e.preventDefault()
-        setSearchString(inputValue)
+        manageSubmit(inputValue)
         setInputValue('')
     }
 
